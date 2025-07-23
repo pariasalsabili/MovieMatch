@@ -31,11 +31,15 @@ pip install -r requirements.txt
 
 3. **Get your TMDb API Key**
    - Sign up at [themoviedb.org](https://www.themoviedb.org)
-   - Navigate to **Settings → API**
-   - Paste your API key into `TMDB_API.py`:
-```python
-API_KEY = "your_api_key_here"
-```
+   - Go to **Settings → API** and generate your API key
+   - Create a new file in the root directory of the project called:
+     ```
+     api_key.txt
+     ```
+   - Paste your API key into that file — it should contain **only** the key, like:
+     ```
+     your_tmdb_api_key_here
+     ```
 
 ---
 
