@@ -1,7 +1,9 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-with open("api_key.txt") as f:
-    API_KEY = f.read().strip()
+load_dotenv()
+API_KEY = os.getenv("TMDB_API_KEY")
 BASE_URL = "https://api.themoviedb.org/3"
 
 def get_genres():
