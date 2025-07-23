@@ -6,12 +6,12 @@
 
 ## 📌 Features
 
-- 🎭 Search movies by genre  
-- 🗓️ Filter results by year or decade  
-- 📊 Sort movies by TMDb rating (highest first)  
-- ✅ Add one or more movies to a watchlist  
-- 📝 View summary and poster link for selected movies  
-- 📂 Edit or remove items from the watchlist (CRUD support)  
+- 🎭 Search movies by genre
+- 🗓️ Filter results by year or decade
+- 📊 Sort movies by TMDb rating (highest first)
+- ✅ Add one or more movies to a watchlist
+- 📝 View summary and poster link for selected movies
+- 📂 Edit or remove items from the watchlist (CRUD support)
 - 💾 Persistent local storage using `watchlist.json`
 
 ---
@@ -19,17 +19,20 @@
 ## 🔧 Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/pariasalsabili/MovieMatch.git
 cd MovieMatch
 ```
 
 2. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. **Get your TMDb API Key**
+
    - Sign up at [themoviedb.org](https://www.themoviedb.org)
    - Navigate to **Settings → API** and copy your API key
    - Create a file in the root directory named:  
@@ -45,14 +48,16 @@ pip install -r requirements.txt
 ## ▶️ Usage
 
 Run the program with:
+
 ```bash
-python main.py
+python project.py
 ```
 
 You'll be prompted to:
-- Choose a genre  
-- Enter a year or decade  
-- Select movies to add to your watchlist  
+
+- Choose a genre
+- Enter a year or decade
+- Select movies to add to your watchlist
 
 Your watchlist will be saved to a local file (`watchlist.json`), and can be viewed or edited within the app.
 
@@ -62,7 +67,7 @@ Your watchlist will be saved to a local file (`watchlist.json`), and can be view
 
 ```
 MovieMatch/
-├── main.py             # Main app logic
+├── project.py             # Main app logic
 ├── TMDB_API.py         # Handles TMDb API calls and loads API key
 ├── .env        # Your API key (excluded via .gitignore)
 ├── watchlist.json      # Saved watchlist (local storage, ignored by Git)
