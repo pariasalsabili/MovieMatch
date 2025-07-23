@@ -64,7 +64,7 @@ Your watchlist will be saved to a local file (`watchlist.json`), and can be view
 MovieMatch/
 ├── main.py             # Main app logic
 ├── TMDB_API.py         # Handles TMDb API calls and loads API key
-├── api_key.txt         # Your API key (excluded via .gitignore)
+├── .env        # Your API key (excluded via .gitignore)
 ├── watchlist.json      # Saved watchlist (local storage, ignored by Git)
 ├── .gitignore          # Git ignore rules
 ├── requirements.txt    # Python dependencies
