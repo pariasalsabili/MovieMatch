@@ -1,6 +1,7 @@
 import requests
 
-API_KEY = "bf87a0134ddd7931f8dd9fb5b8d6d8be"
+with open("api_key.txt") as f:
+    API_KEY = f.read().strip()
 BASE_URL = "https://api.themoviedb.org/3"
 
 def get_genres():
