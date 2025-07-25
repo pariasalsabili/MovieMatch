@@ -4,14 +4,14 @@ import os
 
 WATCHLIST_FILE = "watchlist.json"
 
-def load_watchlist():
-    if os.path.exists(WATCHLIST_FILE):
-        with open(WATCHLIST_FILE, "r") as f:
+def load_watchlist(filepath=WATCHLIST_FILE):
+    if os.path.exists(filepath):
+        with open(filepath, "r") as f:
             return json.load(f)
     return []
 
-def save_watchlist(watchlist):
-    with open(WATCHLIST_FILE, "w") as f:
+def save_watchlist(watchlist, filepath=WATCHLIST_FILE):
+    with open(filepath, "w") as f:
         json.dump(watchlist, f, indent=2)
 
 def display_movies(movies):
@@ -142,6 +142,16 @@ def main():
             save_watchlist(watchlist)
             if added == 0:
                 print("⚠️ All selected movies were already in your watchlist.")
+
+def filter_movies_by_year(movies, year):
+    return [movie for movie in movies if movie.get("release_date", "").startswith(str(year))]
+
+def get_decade_range(decade_input):
+    if decade_input.endswith("s") and decade_input[:-1].isdigit():
+        start_year = int(decade_input[:-1])
+        end_year = start_year + 9
+        return start_year, end_year
+    return None, None
 
 if __name__ == "__main__":
     main()

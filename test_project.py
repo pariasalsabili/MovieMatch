@@ -11,13 +11,14 @@ def test_save_and_load_watchlist(tmp_path):
 
 def test_filter_movies_by_year():
     movies = [
-        {"title": "A", "year": 2010},
-        {"title": "B", "year": 2015},
-        {"title": "C", "year": 2020}
+        {"title": "A", "release_date": "2010-01-01"},
+        {"title": "B", "release_date": "2015-06-12"},
+        {"title": "C", "release_date": "2020-03-22"}
     ]
     result = filter_movies_by_year(movies, 2015)
     assert len(result) == 1
     assert result[0]["title"] == "B"
+
 
 def test_get_decade_range():
     assert get_decade_range("1990s") == (1990, 1999)
